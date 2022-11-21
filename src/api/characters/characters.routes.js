@@ -56,7 +56,7 @@ router.post('/create', upload.single("img"), async (req, res) => {
 });
 
 //* FUNCIÓN QUE ELIMINA UN PERSONAJE
-router.delete('/delete/:id', [isAuth], async (req, res) => {
+router.delete('/delete/:id', async (req, res) => {
 
   try {
     const id = req.params.id;
@@ -69,7 +69,7 @@ router.delete('/delete/:id', [isAuth], async (req, res) => {
 });
 
 //* FUNCIÓN QUE EDITA UN PERSONAJE
-router.put('/edit/:id', [isAuth], upload.single("img"), async (req, res) => {
+router.put('/edit/:id', upload.single("img"), async (req, res) => {
 
   try {
     const id = req.params.id;
